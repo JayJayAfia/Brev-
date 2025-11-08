@@ -1,0 +1,40 @@
+# System Architecture – Brev
+
+## Overview
+Brev is built as a lightweight, minimalist productivity app. The frontend (mobile and web) communicates with the backend through APIs, while the backend manages cloud synchronization and data storage. The architecture emphasizes simplicity, scalability, and modular design.
+
+## Components
+
+### Frontend
+- **Technology:** Flutter or React Native
+- **Responsibilities:**
+  - Display daily planner, reflection journal, and focus tracker
+  - Send and receive data from backend
+  - Render analytics and progress visualization
+
+### Backend
+- **Technology:** Firebase (Cloud Functions, Authentication)
+- **Responsibilities:**
+  - Handle API requests from the frontend
+  - Manage user authentication and sessions
+  - Sync task and journal data in real-time
+
+### Database
+- **Technology:** Firebase Firestore
+- **Responsibilities:**
+  - Store user tasks, notes, and focus logs
+  - Provide data for analytics
+  - Enable scalable, real-time data access
+
+## How Components Communicate
+1. Frontend sends requests to the backend via Firebase API calls.  
+2. Backend processes requests and interacts with Firestore database.  
+3. Database returns data to the backend, which updates the frontend in real-time.
+
+## Why This Approach Works
+- Simple, modular architecture ensures easy maintenance and scalability.  
+- Cross-platform frontend allows mobile and web access.  
+- Firebase provides secure, real-time sync with minimal backend complexity.  
+
+## Optional Visuals
+[Insert wireframe or system diagram here]
